@@ -1,0 +1,86 @@
+#
+# Copyright (C) 2023, Advanced Micro Devices, Inc. - All rights reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+apiVersion: policy.xilinx.com/v1
+kind: ClusterPolicy
+metadata:
+  name: fpga-clusterpolicy
+  labels:
+    app.kubernetes.io/component: "fpga-operator"
+spec:
+  operator:
+    # default 'containerd'
+    {{- if .Values.operator.defaultRuntime }}
+    defaultRuntime: {{ .Values.operator.defaultRuntime }}
+    {{- end }}
+  containerRuntime:
+    # install xilinx-container-runtime on host, and create a runtimeclass
+    # default true
+    {{- if .Values.containerRuntime.enabled }}
+    enabled: {{ .Values.containerRuntime.enabled }}
+    {{- end }}
+    # default 'xilinx'
+    {{- if .Values.containerRuntime.runtimeClass }}
+    runtimeClass: {{ .Values.containerRuntime.runtimeClass }}
+    {{- end }}
+    # default false
+    {{- if .Values.containerRuntime.setAsDefault }}
+    setAsDefault: {{ .Values.containerRuntime.setAsDefault }}
+    {{- end }}
+    {{- if .Values.containerRuntime.repository }}
+    repository: {{ .Values.containerRuntime.repository }}
+    {{- end }}
+    {{- if .Values.containerRuntime.image }}
+    image: {{ .Values.containerRuntime.image }}
+    {{- end }}
+    {{- if .Values.containerRuntime.tag }}
+    tag: {{ .Values.containerRuntime.tag }}
+    {{- end }}
+    {{- if .Values.containerRuntime.imagePullPolicy }}
+    imagePullPolicy: {{ .Values.containerRuntime.imagePullPolicy }}
+    {{- end }}
+    {{- if .Values.containerRuntime.imagePullSecrets }}
+    imagePullSecrets: {{ toYaml .Values.containerRuntime.imagePullSecrets | nindent 6}}
+    {{- end }}
+    # default /usr/bin
+    {{- if .Values.containerRuntime.installDir }}
+    installDir: {{ .Values.containerRuntime.installDir }}
+    {{- end }}
+  devicePlugin:
+    # deploy a device-plugin daemonset
+    # default true
+    {{- if .Values.devicePlugin.enabled }}
+    enabled: {{ .Values.devicePlugin.enabled }}
+    {{- end }}
+    {{- if .Values.devicePlugin.repository }}
+    repository: {{ .Values.devicePlugin.repository }}
+    {{- end }}
+    {{- if .Values.devicePlugin.image }}
+    image: {{ .Values.devicePlugin.image }}
+    {{- end }}
+    {{- if .Values.devicePlugin.tag }}
+    tag: {{ .Values.devicePlugin.tag }}
+    {{- end }}
+    {{- if .Values.devicePlugin.imagePullPolicy }}
+    imagePullPolicy: {{ .Values.devicePlugin.imagePullPolicy }}
+    {{- end }}
+  hostSetup:
+    # install xrt and shell; flash cards
+    # default true
+    {{- if .Values.hostSetup.enabled }}
+    enabled: {{ .Values.hostSetup.enabled }}
+    {{- end }}
+    osDists: {{ toYaml .Values.hostSetup.osDists | nindent 6}}
