@@ -1,0 +1,86 @@
+#
+# Copyright (C) 2023, Advanced Micro Devices, Inc. - All rights reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Default values for fpga-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+nfd:
+  enabled: true
+operator:
+  repository: public.ecr.aws/xilinx_dcg
+  image: fpga-operator
+  tag: latest
+  imagePullPolicy: IfNotPresent
+  defaultRuntime: containerd
+containerRuntime:
+  # install xilinx-container-runtime on host, and create a runtimeclass
+  enabled: true
+  runtimeClass: xilinx
+  setAsDefault: false
+  repository: public.ecr.aws/xilinx_dcg
+  image: xilinx-container-runtime
+  tag: ubuntu18.04
+  imagePullPolicy: IfNotPresent
+  installDir: /usr/bin # default value is /usr/bin
+devicePlugin:
+  # deploy a device-plugin daemonset
+  enabled: true
+  repository: public.ecr.aws/xilinx_dcg
+  image: k8s-device-plugin
+  tag: 1.1.0
+  imagePullPolicy: IfNotPresent
+hostSetup:
+  # install xrt and shell; flash cards
+  enabled: true
+  osDists:
+    - osId: ubuntu
+      osMajorVersion: "18"
+      version: "2022.2"
+      shellFlashEnabled: true # default value is true
+      cards: [] # empty to perform setup for all cards
+      # cards: ["alveo-u200", "alveo-u50"]
+      repository: public.ecr.aws/xilinx_dcg
+      image: host-setup
+      tag: ubuntu18.04
+      imagePullPolicy: IfNotPresent
+    - osId: ubuntu
+      osMajorVersion: "20"
+      version: "2022.2"
+      shellFlashEnabled: true # default value is true
+      cards: [] # empty to perform setup for all cards
+      repository: public.ecr.aws/xilinx_dcg
+      image: host-setup
+      tag: ubuntu20.04
+      imagePullPolicy: IfNotPresent
+    - osId: ubuntu
+      osMajorVersion: "22"
+      version: "2022.2"
+      shellFlashEnabled: true # default value is true
+      cards: [] # empty to perform setup for all cards
+      repository: public.ecr.aws/xilinx_dcg
+      image: host-setup
+      tag: ubuntu22.04
+      imagePullPolicy: IfNotPresent
+    - osId: centos
+      osMajorVersion: "7"
+      version: "2022.2"
+      shellFlashEnabled: true # default value is true
+      cards: [] # empty to perform setup for all cards
+      repository: public.ecr.aws/xilinx_dcg
+      image: host-setup
+      tag: centos7.9
+      imagePullPolicy: IfNotPresent

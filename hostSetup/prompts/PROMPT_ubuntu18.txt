@@ -1,0 +1,185 @@
+NOTICE:  BY INVOKING THIS SCRIPT AND USING THE SOFTWARE INSTALLED BY THE
+SCRIPT, YOU AGREE ON BEHALF OF YOURSELF AND YOUR EMPLOYER (IF APPLICABLE)
+TO BE BOUND TO THE LICENSE AGREEMENTS APPLICABLE TO THE SOFTWARE THAT YOU
+INSTALL BY RUNNING THE SCRIPT.
+
+BY ELECTING TO CONTINUE, YOU WILL CAUSE THIS SCRIPT FILE TO AUTOMATICALLY
+INSTALL A VARIETY OF SOFTWARE COPYRIGHTED
+BY XILINX AND THIRD PARTIES THAT IS SUBJECT TO VARIOUS LICENSE AGREEMENTS 
+THAT APPEAR UPON INSTALLATION, ACCEPTANCE AND/OR ACTIVATION OF THE
+SOFTWARE AND/OR ARE CONTAINED OR DESCRIBED IN THE CORRESPONDING RELEASE
+NOTES OR OTHER DOCUMENTATION OR HEADER OR SOURCE FILES. XILINX DOES NOT
+GRANT TO LICENSEE ANY RIGHTS OR LICENSES TO SUCH THIRD-PARTY SOFTWARE.
+LICENSEE AGREES TO CAREFULLY REVIEW AND ABIDE BY THE TERMS AND CONDITIONS
+OF SUCH LICENSE AGREEMENTS TO THE EXTENT THAT THEY GOVERN SUCH SOFTWARE.
+
+BY ELECTING TO CONTINUE, YOU WILL CAUSE THE FOLLOWING SOFTWARE TO BE DOWNLOADED
+AND INSTALLED ON YOUR SYSTEM. BY ELECTING TO CONTINUE, YOU UNDERSTAND THAT THE
+INSTALLATION OF THE SOFTWARE LISTED BELOW MAY ALSO RESULT IN THE INSTALLATION
+ON YOUR SYSTEM OF ADDITIONAL SOFTWARE NOT LISTED BELOW IN ORDER TO OPERATE
+(SUCH SOFTWARE IS HEREAFTER REFERRED TO AS ‘DEPENDENCIES’)
+XILINX DOES NOT GRANT TO LICENSEE ANY RIGHTS OR LICENSES TO SUCH DEPENDENCIES
+LICENSEE AGREES TO CAREFULLY REVIEW AND ABIDE BY THE TERMS AND CONDITIONS
+OF ANY LICENSE AGREEMENTS TO THE EXTENT THAT THEY GOVERN SUCH DEPENDENCIES
+
+BY ELECTING TO CONTINUE, YOU WILL CAUSE THE FOLLOWING SOFTWARE PACKAGES
+(AND THEIR RESPECTIVE DEPENDENCIES, IF APPLICABLE) TO BE DOWNLOADED FROM
+UBUNTU'S MAIN REPO AND INSTALLED ON YOUR SYSTEM:
+
+http://us.archive.ubuntu.com/ubuntu/dists/bionic/
+
+adduser
+binutils
+binutils-common
+binutils-x86-64-linux-gnu
+build-essential
+bzip2
+coreutils
+cpp
+debconf
+distro-info-data
+dkms
+dpkg
+dpkg-dev
+g++
+gcc
+init-system-helpers
+kmod
+libacl1
+libapparmor1
+libatomic1
+libattr1
+libaudit-common
+libaudit1
+libbinutils
+libblkid1
+libbsd0
+libbz2-1.0
+libc-dev-bin
+libc6
+libc6-dev
+libcap-ng0
+libcc1-0
+libcilkrts5
+libdb5.3
+libdbus-1-3
+libdpkg-perl
+libdrm-amdgpu1
+libdrm-common
+libdrm-intel1
+libdrm-nouveau2
+libdrm-radeon1
+libdrm2
+libedit2
+libegl-mesa0
+libegl1
+libelf1
+libexpat1
+libfreetype6
+libgbm1
+libgcrypt20
+libgdbm-compat4
+libgl1
+libgl1-mesa-dri
+libglapi-mesa
+libglvnd0
+libglx-mesa0
+libglx0
+libgmp10
+libgnutls30
+libgomp1
+libgpg-error0
+libidn2-0
+libitm1
+libkmod2
+liblocale-gettext-perl
+liblsan0
+liblz4-1
+liblzma5
+libmount1
+libmpc3
+libmpdec2
+libmpfr6
+libmpx2
+libp11-kit0
+libpam-modules
+libpam-modules-bin
+libpam-runtime
+libpam0g
+libpciaccess0
+libpng16-16
+libpython3-stdlib
+libquadmath0
+libseccomp2
+libselinux1
+libsemanage-common
+libsemanage1
+libsepol1
+libsmartcols1
+libsqlite3-0
+libssl1.1
+libstdc++6
+libsystemd0
+libtasn1-6
+libtsan0
+libudev1
+ibunistring2
+libuuid1
+libwayland-client0
+libwayland-server0
+libx11-6
+libx11-data
+libx11-xcb1
+libxau6
+libxcb-dri2-0
+libxcb-dri3-0
+libxcb-glx0
+libxcb-present0
+libxcb-sync1
+libxcb1
+libxdmcp6
+libxext6
+libxfixes3
+libxshmfence1
+libxxf86vm1
+libzstd1
+linux-libc-dev
+login
+lsb-base
+lsb-release
+make
+mime-support
+mount
+netbase
+ocl-icd-libopencl1
+ocl-icd-opencl-dev
+opencl-c-headers
+passwd
+patch
+perl
+perl-base
+python3
+python3-minimal
+readline-common
+sed
+sensible-utils
+tar
+udev
+util-linux
+uuid-dev
+xz-utils
+zlib1g
+
+BY ELECTING TO CONTINUE, YOU WILL CAUSE THE FOLLOWING SOFTWARE PACKAGES
+(AND THEIR RESPECTIVE DEPENDENCIES, IF APPLICABLE) TO BE DOWNLOADED FROM
+https://www.xilinx.com AND INSTALLED ON YOUR SYSTEM:
+
+Xilinx Runtime (XRT)
+Xilinx FPGA Shells
+
+BY ELECTING TO CONTINUE, YOU ACKNOWLEDGE AND AGREE, FOR YOURSELF AND ON BEHALF
+OF YOUR EMPLOYER (IF APPLICABLE), THAT XILINX IS NOT DISTRIBUTING TO YOU IN
+THIS FILE ANY OF THE AFORMENTIONED SOFTWARE OR DEPENDENCIES, AND THAT YOU ARE
+SOLELY RESPONSIBLE FOR THE INSTALLATION OF SUCH SOFTWARE AND DEPENDENCIES ON
+YOUR SYSTEM AND FOR CAREFULLY REVIEWING AND ABIDING BY THE TERMS AND CONDITIONS
+OF ANY LICENSE AGREEMENTS TO THE EXTENT THAT THEY GOVERN SUCH SOFTWARE AND DEPENDENCIES
