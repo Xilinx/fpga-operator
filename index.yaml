@@ -2,8 +2,26 @@ apiVersion: v1
 entries:
   fpga-operator:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-10-24T16:33:26.871816455-07:00"
+    dependencies:
+    - condition: nfd.enabled
+      name: node-feature-discovery
+      repository: file://charts/node-feature-discovery
+      version: v0.12.0
+    description: Xilinx FPGA Operator creates resources to automate FPGA setup in
+      a Kubernetes cluster
+    digest: c4a4c40f222babcbb9015b650ebd7fbb6734f534e6131db5f9a45109b505ffd7
+    maintainers:
+    - email: k8s_dev@amd.com
+      name: Yahui_Lu
+    name: fpga-operator
+    urls:
+    - https://xilinx.github.io/fpga-operator/fpga-operator-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 0.1.0-alpha
-    created: "2023-04-17T15:25:55.176522727-07:00"
+    created: "2023-10-24T16:33:26.868200253-07:00"
     dependencies:
     - condition: nfd.enabled
       name: node-feature-discovery
@@ -19,4 +37,4 @@ entries:
     urls:
     - https://xilinx.github.io/fpga-operator/fpga-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-17T15:25:55.172516831-07:00"
+generated: "2023-10-24T16:33:26.864462111-07:00"
