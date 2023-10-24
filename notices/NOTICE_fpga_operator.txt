@@ -1,0 +1,81 @@
+Container File Notices
+
+NOTICE - BY INVOKING THIS SCRIPT AND USING THE SOFTWARE INSTALLED BY THE SCRIPT, YOU AGREE ON BEHALF OF YOURSELF AND YOUR EMPLOYER (IF APPLICABLE) TO BE BOUND TO THE LICENSE AGREEMENTS APPLICABLE TO THE PACKAGES IDENTIFIED BELOW THAT YOU INSTALL BY RUNNING THE SCRIPT. YOU UNDERSTAND THAT THE INSTALLATION OF THE PACKAGES LISTED BELOW MAY ALSO RESULT IN THE INSTALLATION ON YOUR SYSTEM OF ADDITIONAL PACKAGES NOT LISTED BELOW IN ORDER TO OPERATE (EACH, A ‘DEPENDENCY’). ADVANCED MICRO DEVICES, INC., ON BEHALF OF ITSELF AND ITS SUBSIDIARIES AND AFFILIATES, DOES NOT GRANT TO YOU ANY RIGHTS OR LICENSES TO ANY SUCH DEPENDENCY. THE SCRIPT ITSELF IS LICENSED TO YOU SUBJECT TO THE FOLLOWING TERMS: 
+
+Copyright © 2023 Advanced Micro Devices, Inc. All Rights Reserved. 
+
+This file is licensed under the following license terms (MIT):  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This file pulls in the following packages subject to the licenses identified below:
+| Package                               | Licenses                              | URL                                               |
+|---------------------------------------|---------------------------------------|---------------------------------------------------|
+| golang                                | 3-clause BSD + patent grant           | https://go.dev/                                   |
+| logrusr/v3                            | MIT                                   | github.com/bombsimon/logrusr/v3                   |
+| logr                                  | Apache-2.0                            | github.com/go-logr/logr                           |
+| hashstructure                         | MIT                                   | github.com/mitchellh/hashstructure                |
+| testify                               | MIT                                   | github.com/stretchr/testify                       |
+| mod                                   | BSD-3-Clause                          | golang.org/x/mod                                  |
+| k8s.io/api                            | Apache-2.0                            | github.com/kubernetes/api                         |
+| k8s.io/apimachinery                   | Apache-2.0                            | github.com/kubernetes/apimachinery                |
+| k8s.io/client-go                      | Apache-2.0                            | github.com/kubernetes/client-go                   |
+| sigs.k8s.io/controller-runtime        | Apache-2.0                            | github.com/kubernetes-sigs/controller-runtime     |
+| perks                                 | MIT                                   | github.com/beorn7/perks                           |
+| xxhash/v2                             | MIT                                   | github.com/cespare/xxhash/v2                      |
+| go-spew                               | ISC                                   | github.com/davecgh/go-spew                        |
+| go-restful/v3                         | MIT                                   | github.com/emicklei/go-restful/v3                 |
+| json-patch                            | BSD-3-Clause                          | github.com/evanphx/json-patch                     |
+| json-patch/v5                         | BSD-3-Clause                          | github.com/evanphx/json-patch                     |
+| fsnotify                              | BSD-3-Clause                          | github.com/fsnotify/fsnotify                      |
+| jsonpointer                           | MIT                                   | github.com/go-openapi/jsonpointer                 |
+| jsonreference                         | jsonreference                         | github.com/go-openapi/jsonreference               |
+| swag                                  | go-openapi/swag                       | github.com/go-openapi/swag                        |
+| protobuf                              | BSD-3-Clause                          | github.com/gogo/protobuf                          |
+| groupcache                            | Apache-2.0                            | github.com/golang/groupcache                      |
+| protobuf                              | BSD-3-Clause                          | github.com/golang/protobuf                        |
+| gnostic                               | Apache-2.0                            | github.com/google/gnostic                         |
+| go-cmp                                | go-cmp                                | github.com/google/go-cmp                          |
+| gofuzz                                | Apache-2.0                            | github.com/google/gofuzz                          |
+| uuid                                  | BSD-3-Clause                          | github.com/google/uuid                            |
+| mergo                                 | BSD-3-Clause                          | github.com/imdario/mergo                          |
+| intern                                | MIT                                   | github.com/josharian/intern                       |
+| jsoniter                              | MIT                                   | github.com/json-iterator/go                       |
+| easyjson                              | MIT                                   | github.com/mailru/easyjson                        |
+| golang_protobuf_extensions            | Apache-2.0                            | github.com/matttproud/golang_protobuf_extensions  |
+| concurrent                            | Apache-2.0                            | github.com/modern-go/concurrent                   |
+| reflect2                              | Apache-2.0                            | github.com/modern-go/reflect2                     |
+| goautoneg                             | BSD-3-Clause                          | github.com/munnerz/goautoneg                      |
+| errors                                | BSD-2-Clause                          | github.com/pkg/errors                             |
+| go-difflib                            | BSD-3-Clause                          | github.com/pmezard/go-difflib                     |
+| client_golang                         | Apache-2.0                            | github.com/prometheus/client_golang               |
+| prometheus/client_model               | Apache-2.0                            | github.com/prometheus/client_model                |
+| prometheus/common                     | Apache-2.0                            | github.com/prometheus/common                      |
+| prometheus/procfs                     | Apache-2.0                            | github.com/prometheus/procfs                      |
+| logrus                                | MIT                                   | github.com/sirupsen/logrus                        |
+| pflag                                 | BSD-3-Clause                          | github.com/spf13/pflag                            |
+| atomic                                | MIT                                   | github.com/uber-go/atomic                         |
+| net                                   | BSD-3-Clause                          | golang.org/x/net                                  |
+| oauth2                                | BSD-3-Clause                          | golang.org/x/oauth2                               |
+| sys                                   | BSD-3-Clause                          | golang.org/x/sys                                  |
+| term                                  | BSD-3-Clause                          | golang.org/x/term                                 |
+| text                                  | BSD-3-Clause                          | golang.org/x/text                                 |
+| time                                  | BSD-3-Clause                          | golang.org/x/time                                 |
+| jsonpatch/v2                          | Apache-2.0                            | gomodules.xyz/jsonpatch/v2                        |
+| appengine                             | Apache-2.0                            | google.golang.org/appengine                       |
+| protobuf                              | BSD-3-Clause                          | google.golang.org/protobuf                        |
+| gopkg.in/inf.v0                       | BSD-3-Clause                          | github.com/go-inf/inf                             |
+| gopkg.in/yaml.v2                      | Apache-2.0                            | gopkg.in/yaml.v2                                  |
+| gopkg.in/yaml.v3                      | Apache-2.0                            | gopkg.in/yaml.v3                                  |
+| k8s.io/apiextensions-apiserver        | Apache-2.0                            | github.com/kubernetes/apiextensions-apiserver     |
+| k8s.io/component-base                 | Apache-2.0                            | github.com/kubernetes/component-base              |
+| k8s.io/klog/v2                        | Apache-2.0                            | github.com/kubernetes/klog                        |
+| k8s.io/kube-openapi                   | Apache-2.0                            | github.com/kubernetes/kube-openapi                |
+| k8s.io/utils                          | Apache-2.0                            | github.com/kubernetes/utils                       |
+| sigs.k8s.io/json                      | Apache-2.0, BSD-3-Clause              | github.com/kubernetes-sigs/json                   |
+| sigs.k8s.io/structured-merge-diff/v4  | Apache-2.0                            | github.com/kubernetes-sigs/structured-merge-diff  |
+| sigs.k8s.io/yaml                      | BSD-3-Clause, MIT                     | github.com/kubernetes-sigs/yaml                   |
+

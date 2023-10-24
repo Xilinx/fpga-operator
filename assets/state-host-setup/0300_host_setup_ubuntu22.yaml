@@ -1,0 +1,114 @@
+#
+# Copyright (C) 2023, Advanced Micro Devices, Inc. - All rights reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: host-setup-ubuntu22-daemonset
+  namespace: "filled_by_operator"
+  labels:
+    app: host-setup
+
+spec:
+  selector:
+    matchLabels:
+      name: host-setup
+  template:
+    metadata:
+      labels:
+        name: host-setup
+    spec:
+      nodeSelector:
+        feature.node.kubernetes.io/system-os_release.ID: "ubuntu"
+        feature.node.kubernetes.io/system-os_release.VERSION_ID.major: "22"
+      tolerations:
+        # these tolerations are to have the daemonset runnable on control plane nodes
+        # remove them if your control plane nodes should not run pods
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+        - key: node-role.kubernetes.io/master
+          operator: Exists
+          effect: NoSchedule
+      initContainers:
+        - name: init-xrt-xrm
+          image: "filed_by_operator"
+          imagePullPolicy: "filled_by_operator"
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: host-opt
+              mountPath: /opt
+            - name: host-lib
+              mountPath: /lib
+            - name: host-usr
+              mountPath: /usr
+            - name: host-etc
+              mountPath: /etc
+            - name: host-var
+              mountPath: /var
+        - name: init-card-flash
+          image: "filed_by_operator"
+          imagePullPolicy: "filled_by_operator"
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: host-opt
+              mountPath: /opt
+            - name: host-lib
+              mountPath: /lib
+            - name: host-usr
+              mountPath: /usr
+            - name: host-etc
+              mountPath: /etc
+            - name: host-var
+              mountPath: /var
+      containers:
+        - name: host-setup-ubuntu
+          image: "filed_by_operator"
+          imagePullPolicy: "filled_by_operator"
+          securityContext:
+            privileged: true
+          volumeMounts:
+            - name: host-opt
+              mountPath: /opt
+            - name: host-lib
+              mountPath: /lib
+            - name: host-usr
+              mountPath: /usr
+            - name: host-etc
+              mountPath: /etc
+            - name: host-var
+              mountPath: /var
+      hostIPC: true
+      hostNetwork: true
+      hostPID: true
+      volumes:
+        - name: host-opt
+          hostPath:
+            path: /opt
+        - name: host-lib
+          hostPath:
+            path: /lib
+        - name: host-usr
+          hostPath:
+            path: /usr
+        - name: host-etc
+          hostPath:
+            path: /etc
+        - name: host-var
+          hostPath:
+            path: /var

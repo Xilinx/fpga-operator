@@ -1,0 +1,22 @@
+#
+# Copyright (C) 2023, Advanced Micro Devices, Inc. - All rights reserved
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+dependencies:
+- name: node-feature-discovery
+  repository: https://kubernetes-sigs.github.io/node-feature-discovery/charts
+  version: 0.12.0
+digest: sha256:ca6cedd0d666749992fb4d211bb19d0c257ce3fc7438dd9c4412f1ac323ff0dc
+generated: "2023-01-03T11:13:41.690928434-08:00"
